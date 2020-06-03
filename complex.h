@@ -8,10 +8,10 @@ using namespace std;
 
 class Complex {        
 			private:
-				double re, im;      // действительная и мнимая части
+				double re, im;       // Г¤ГҐГ©Г±ГІГўГЁГІГҐГ«ГјГ­Г Гї ГЁ Г¬Г­ГЁГ¬Г Гї Г·Г Г±ГІГЁ
 
 			public:
-				// конструкторы 
+				// ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г» 
 				Complex(){};
 
 				Complex(double r);
@@ -19,40 +19,40 @@ class Complex {
 				Complex(double r, double i);
 
 				Complex(const Complex &c);
-				// деструктор
+				// Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
 				~Complex()
 				{
 				}
 
-				// остальные функции
+				// Г®Г±ГІГ Г«ГјГ­Г»ГҐ ГґГіГ­ГЄГ¶ГЁГЁ
 
-				// Модуль комплексного числа
+				// ГЊГ®Г¤ГіГ«Гј ГЄГ®Г¬ГЇГ«ГҐГЄГ±Г­Г®ГЈГ® Г·ГЁГ±Г«Г 
 				double abs(const Complex &c);
 
-				// оператор присваивания
+				// Г®ГЇГҐГ°Г ГІГ®Г° ГЇГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГї
 				Complex& operator = (const Complex &c);
 
-				// оператор +=
+				// Г®ГЇГҐГ°Г ГІГ®Г° +=
 				Complex& operator += (const Complex &c);
 
-				// оператор сложения
+				// Г®ГЇГҐГ°Г ГІГ®Г° Г±Г«Г®Г¦ГҐГ­ГЁГї
 				Complex operator + (const Complex &c) const;
 
-				// оператор вычитания
+				// Г®ГЇГҐГ°Г ГІГ®Г° ГўГ»Г·ГЁГІГ Г­ГЁГї
 				Complex operator - (const Complex &c) const;
 
-				// оператор умножения
+				// Г®ГЇГҐГ°Г ГІГ®Г° ГіГ¬Г­Г®Г¦ГҐГ­ГЁГї
 				Complex operator * (const Complex &c) const;
 
-				// оператор деления
+				// Г®ГЇГҐГ°Г ГІГ®Г° Г¤ГҐГ«ГҐГ­ГЁГї
 				Complex operator / (const Complex &c) const;
 
-				//возведение в степень
+				//ГўГ®Г§ГўГҐГ¤ГҐГ­ГЁГҐ Гў Г±ГІГҐГЇГҐГ­Гј
 				Complex power(const Complex &c, int n);
 
-				//расчет фазы очень страшно пока не знаю как 
+				//Г°Г Г±Г·ГҐГІ ГґГ Г§Г» Г®Г·ГҐГ­Гј Г±ГІГ°Г ГёГ­Г® ГЇГ®ГЄГ  Г­ГҐ Г§Г­Г Гѕ ГЄГ ГЄ 
 
-				// разрешаем доступ к private данным
+				// Г°Г Г§Г°ГҐГёГ ГҐГ¬ Г¤Г®Г±ГІГіГЇ ГЄ private Г¤Г Г­Г­Г»Г¬
 				friend ostream & operator<< (ostream &, const Complex &);
 				friend istream & operator>> (istream &, Complex &);
 
