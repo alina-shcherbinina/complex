@@ -16,20 +16,20 @@ Complex::Complex(double r, double i) {
 	im = i;
 }
 
-Complex::Complex(const Complex &c)   // конструктор копирования
+Complex::Complex(const Complex &c)   // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 {
 	re = c.re;
 	im = c.im;
 }
 
 
-// Модуль комплексного числа
+// РњРѕРґСѓР»СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 double Complex::abs(const Complex &c)
 {
 	return sqrt(re * re + im * im);
 }
 
-// оператор присваивания
+// РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 Complex& Complex::operator = (const Complex &c)
 {
 	re = c.re;
@@ -38,7 +38,7 @@ Complex& Complex::operator = (const Complex &c)
 	return (*this);
 }
 
-// оператор +=
+// РѕРїРµСЂР°С‚РѕСЂ +=
 Complex& Complex::operator += (const Complex &c)
 {
 	re = re + c.re;
@@ -46,26 +46,26 @@ Complex& Complex::operator += (const Complex &c)
 	return *this;
 }
 
-// оператор сложения
+// РѕРїРµСЂР°С‚РѕСЂ СЃР»РѕР¶РµРЅРёСЏ
 Complex Complex::operator + (const Complex &c) const
 {
 	Complex res(*this);
 	return res += c;
 }
 
-// оператор вычитания
+// РѕРїРµСЂР°С‚РѕСЂ РІС‹С‡РёС‚Р°РЅРёСЏ
 Complex Complex::operator - (const Complex &c) const
 {
 	return Complex(re - c.re, im - c.im);
 }
 
-// оператор умножения
+// РѕРїРµСЂР°С‚РѕСЂ СѓРјРЅРѕР¶РµРЅРёСЏ
 Complex Complex::operator * (const Complex &c) const
 {
 	return Complex(re * c.re - im * c.im, re * c.im + im * c.re);
 }
 
-// оператор деления
+// РѕРїРµСЂР°С‚РѕСЂ РґРµР»РµРЅРёСЏ
 Complex Complex::operator / (const Complex &c) const
 {
 	Complex temp;
