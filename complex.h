@@ -8,10 +8,10 @@ using namespace std;
 
 class Complex {        
 			private:
-				double re, im;       // äåéñòâèòåëüíàÿ è ìíèìàÿ ÷àñòè
+				double re, im;      // действительная и мнимая части
 
 			public:
-				// êîíñòðóêòîðû 
+				// конструкторы 
 				Complex(){};
 
 				Complex(double r);
@@ -19,40 +19,40 @@ class Complex {
 				Complex(double r, double i);
 
 				Complex(const Complex &c);
-				// äåñòðóêòîð
+				// деструктор
 				~Complex()
 				{
 				}
 
-				// îñòàëüíûå ôóíêöèè
+				// остальные функции
 
-				// Ìîäóëü êîìïëåêñíîãî ÷èñëà
+				// Модуль комплексного числа
 				double abs(const Complex &c);
 
-				// îïåðàòîð ïðèñâàèâàíèÿ
+				// оператор присваивания
 				Complex& operator = (const Complex &c);
 
-				// îïåðàòîð +=
+				// оператор +=
 				Complex& operator += (const Complex &c);
 
-				// îïåðàòîð ñëîæåíèÿ
+				// оператор сложения
 				Complex operator + (const Complex &c) const;
 
-				// îïåðàòîð âû÷èòàíèÿ
+				// оператор вычитания
 				Complex operator - (const Complex &c) const;
 
-				// îïåðàòîð óìíîæåíèÿ
+				// оператор умножения
 				Complex operator * (const Complex &c) const;
 
-				// îïåðàòîð äåëåíèÿ
+				// оператор деления
 				Complex operator / (const Complex &c) const;
 
-				//âîçâåäåíèå â ñòåïåíü
+				//возведение в степень
 				Complex power(const Complex &c, int n);
 
-				//ðàñ÷åò ôàçû î÷åíü ñòðàøíî ïîêà íå çíàþ êàê 
+				//расчет фазы очень страшно пока не знаю как 
 
-				// ðàçðåøàåì äîñòóï ê private äàííûì
+				// разрешаем доступ к private данным
 				friend ostream & operator<< (ostream &, const Complex &);
 				friend istream & operator>> (istream &, Complex &);
 
